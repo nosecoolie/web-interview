@@ -1,5 +1,5 @@
 const API_ENDPOINT = 'http://localhost:3010'
-const CONSULTANT_TYPES = ['GP', 'Therapist', 'Physio', 'Specialist']
+const CONSULTANT_TYPES = ['GP', 'Therapist', 'Specialist']
 const APPOINTMENT_TYPES = ['Video', 'Audio']
 
 // eslint-disable-next-line import/prefer-default-export
