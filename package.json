@@ -9,8 +9,6 @@
   },
   "scripts": {
     "start": "yarn server & react-scripts start",
-    "heroku-start": "yarn server & node ./build/index.html",
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "precommit": "lint-staged",
     "server": "yarn json-server --watch ./data/data.json --port 3010"
@@ -28,15 +26,15 @@
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-scripts": "^3.2.0"
   },
   "devDependencies": {
     "@testing-library/react": "^9.3.0",
     "babel-plugin-dynamic-import-node": "^2.3.0",
     "husky": "^2.5.0",
     "lint-staged": "^8.2.1",
-    "prettier": "1.18.2",
-    "react-scripts": "^3.2.0"
+    "prettier": "1.18.2"
   },
   "browserslist": [
     ">0.2%",
