@@ -1,14 +1,16 @@
 {
   "name": "web-interview",
   "version": "0.1.0",
+  "homepage": "https://appointment-form-page.herokuapp.com/",
   "private": true,
   "engines": {
     "node": ">=10.13"
   },
   "scripts": {
     "start": "yarn server & react-scripts start",
+    "heroku-start": "yarn server node ./build/index.html",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test",
     "precommit": "lint-staged",
     "server": "yarn json-server --watch ./data/data.json --port 3010"
   },
@@ -28,6 +30,8 @@
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
+    "@testing-library/react": "^9.3.0",
+    "babel-plugin-dynamic-import-node": "^2.3.0",
     "husky": "^2.5.0",
     "lint-staged": "^8.2.1",
     "prettier": "1.18.2",
