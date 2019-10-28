@@ -1,4 +1,4 @@
-const API_ENDPOINT = 'https://appointment-form-page.herokuapp.com/:3010'
+const API_ENDPOINT = 'https://appointment-json-server.herokuapp.com'
 const CONSULTANT_TYPES = ['GP', 'Therapist', 'Specialist']
 const APPOINTMENT_TYPES = ['Video', 'Audio']
 
