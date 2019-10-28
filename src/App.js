@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import logo from './logo.png'
 import { API_ENDPOINT } from './config'
 
+import AppointmentForm from './components/AppointmentForm'
+
 import './App.scss'
 
 class App extends Component {
@@ -17,24 +19,23 @@ class App extends Component {
   }
 
   componentDidMount() {
-    document
-      .querySelectorAll('button')
-      .querySelectorAll('[id=GP-button]')
-      .attachEventHandler('click', this.onClick)
-
-    fetch(`${API_ENDPOINT}/availableSlots`)
-      .then(res => res.json())
-      .then(json => {
-        this.setState({ availableSlots: json })
-      })
-      .catch(() => {
-        // TODO: Handle error here
-      })
+    // document
+    //   .querySelectorAll('button')
+    //   .querySelectorAll('[id=GP-button]')
+    //   .attachEventHandler('click', this.onClick)
+    // fetch(`${API_ENDPOINT}/availableSlots`)
+    //   .then(res => res.json())
+    //   .then(json => {
+    //     this.setState({ availableSlots: json })
+    //   })
+    //   .catch(() => {
+    //     // TODO: Handle error here
+    //   })
   }
 
-  onClick() {
-    this.setState({ selectedAppointmentType: 'gp' })
-  }
+  // onClick() {
+  //   this.setState({ selectedAppointmentType: 'gp' })
+  // }
 
   render() {
     // calculate matching slots
@@ -56,66 +57,11 @@ class App extends Component {
 
     return (
       <div className="app">
-        <h2 className="h6">New appointment</h2>
         <div className="app-header">
           <img src={logo} className="app-logo" alt="Babylon Health" />
         </div>
-        <div style={{ maxWidth: 600, margin: '24px auto' }}>
-          <div className="button" id="GP-button">
-            GP
-          </div>
-          <div
-            className="button"
-            onClick={e => {
-              this.setState({ selectedAppointmentType: 'Therapist' })
-            }}
-          >
-            Therapist
-          </div>
-          <div
-            className="button"
-            onClick={e => {
-              this.setState({ selectedAppointmentType: 'Physio' })
-            }}
-          >
-            Physio
-          </div>
-          <div
-            className="button"
-            onClick={e => {
-              this.setState({ selectedAppointmentType: 'specialist' })
-            }}
-          >
-            Specialist
-          </div>
-          <div>
-            <strong>Appointments</strong>
-            {slots.map(slot => (
-              <li
-                className="appointment-button"
-                onClick={() => {
-                  this.setState({ selectedAppointment: slot })
-                }}
-              >
-                {slot.time}
-              </li>
-            ))}
-          </div>
-          <div>
-            <strong>Notes</strong>
-            <textarea />
-          </div>
-          <div>
-            <div
-              className="button"
-              onClick={() => {
-                /* TODO: submit the data */
-              }}
-            >
-              Book appointment
-            </div>
-          </div>
-        </div>
+        <h2 className="h6">New appointment</h2>
+        <AppointmentForm />
       </div>
     )
   }

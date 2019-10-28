@@ -1,0 +1,34 @@
+@import '../../constants.scss';
+.appointment {
+  &__fields {
+    margin-bottom: 26px;
+    padding-bottom: 160px;
+    border-bottom: $border-standard;
+  }
+  &__button {
+    background-color: $positive;
+    padding: 16px 0;
+    color: #fff;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    &--disable {
+      background-color: $light-grey;
+    }
+  }
+  .user {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: $border-standard;
+    &__avatar {
+      display: block;
+      width: 64px;
+      height: 64px;
+      margin-right: 12px;
+    }
+    &__name{
+      font-weight: bold;
+    }
+  }
+}

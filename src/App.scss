@@ -1,6 +1,7 @@
 @import './constants.scss';
 
 .app-header {
+  text-align: center;
   padding: $gutter-size--large;
 
   img {
@@ -26,4 +27,9 @@ h2 {
   &.h6 {
     font-size: 24px;
   }
+}
+
+.app {
+  max-width: 600px;
+  margin: 24px auto;
 }
