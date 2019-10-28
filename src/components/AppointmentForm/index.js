@@ -94,7 +94,7 @@ function AppointmentForm(props) {
               stateHandler={value =>
                 setFormState(prevState => ({
                   ...prevState,
-                  consultantType: value,
+                  ...{ consultantType: value, chosenDateTime: null },
                 }))
               }
             />
@@ -116,7 +116,7 @@ function AppointmentForm(props) {
               stateHandler={value =>
                 setFormState(prevState => ({
                   ...prevState,
-                  appointmentType: value,
+                  ...{ appointmentType: value, chosenDateTime: null },
                 }))
               }
             />
